@@ -26,17 +26,27 @@
     </p>
     <div><b>Fig 1. Class diagram for Employee and Manager using Inheritance.</b></div><br>
 <div>
-<IMG src="images/fig2.png">
+<IMG src="images/fig1.png">
 </div><br>
 <div>Consider these sample methods in the <i>Employee</i> and <i>Manager</i> classes:</div>
     <div><b>Fig 2. The GetDetails method of the Employee class.</b></div><br>
-<div>
-<IMG src="images/getdetails1.png">
-</div><br>
+<pre>
+	public virtual string GetDetails() {
+		return "Name: " + Name + "\n"
+		+ "Salary: " + Salary + "\n"
+		+ "BirthDate: " + BirthDate;
+	}
+</pre>
     <div><b>Fig 3. The GetDetails method of the Manager class.</b></div><br>
-<div>
-<IMG src="images/getdetails2.png">
-</div><br>
+<pre>
+	public override string GetDetails()
+	{
+		return "Name: " + Name + Environment.NewLine +
+		"Salary: " + Salary + Environment.NewLine +
+		"Manager of: " + Departament;
+	}
+</pre>
+<br>
 <p align="justify">
   The Manager class has a GetDetails method by definition because it inherits one from the Employee class. However, the original method has been replaced, or overridden, by the derived class’s version.
 </p>
